@@ -12,8 +12,7 @@ add.addEventListener("click", () => {
       console.log(data);
       let content = "";
       data.products.forEach((user) => {
-        if (user.price < 50) {
-          content += `<div class="card w-25">
+        content += `<div class="card w-25">
                             <img src="${user.images[0]}" class="card-img-top">
                             <div class="card-body">
                               <h5 class="card-title">${user.title}</h5>
@@ -22,7 +21,6 @@ add.addEventListener("click", () => {
                               <button class="btn btn-primary w-100">View Products</button>
                             </div>
                       </div>`;
-        }
       });
       div.innerHTML = content;
     });
